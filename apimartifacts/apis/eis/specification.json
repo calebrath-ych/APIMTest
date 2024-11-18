@@ -1,0 +1,188 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "EIS",
+    "description": "Import from \"YchApiv3-Stage\" Function App",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://apiv3-stage.yakimachief.com/eis"
+    }
+  ],
+  "paths": {
+    "/varieties/": {
+      "get": {
+        "summary": "GetVarieties",
+        "operationId": "get-getvarieties",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/customer-deliveries": {
+      "get": {
+        "summary": "GetCustomerDeliveryDetails",
+        "operationId": "get-getcustomerdeliverydetails",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/transfer-deliveries": {
+      "get": {
+        "summary": "GetTransferDeliveryDetails",
+        "operationId": "get-gettransferdeliverydetails",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/sales-order/{salesOrderCode}/unit-conversions/": {
+      "get": {
+        "summary": "GetSalesOrderLineUnitConversions",
+        "operationId": "get-getsalesorderlineunitconversions",
+        "parameters": [
+          {
+            "name": "salesOrderCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/product/{productCode}/unit-conversions/": {
+      "get": {
+        "summary": "GetProductUnitConversions",
+        "operationId": "get-getproductunitconversions",
+        "parameters": [
+          {
+            "name": "productCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/proxy/post": {
+      "post": {
+        "summary": "PostProxy",
+        "operationId": "post-postproxy",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/proxy/ycrm/get": {
+      "get": {
+        "summary": "YcrmGetProxy",
+        "operationId": "get-ycrmgetproxy",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/proxy/ycrm/post": {
+      "post": {
+        "summary": "YcrmPostProxy",
+        "operationId": "post-ycrmpostproxy",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/proxy/grower-portal/post": {
+      "post": {
+        "summary": "GrowerPortalPostProxy",
+        "operationId": "post-growerportalpostproxy",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/customers/{customerCode}/exists/": {
+      "get": {
+        "summary": "GetCustomerExists",
+        "operationId": "get-getcustomerexists",
+        "parameters": [
+          {
+            "name": "customerCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/proxy/lims/post": {
+      "post": {
+        "summary": "LimsPostProxy",
+        "operationId": "post-limspostproxy",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "apiKeyHeader": {
+        "type": "apiKey",
+        "name": "Ocp-Apim-Subscription-Key",
+        "in": "header"
+      },
+      "apiKeyQuery": {
+        "type": "apiKey",
+        "name": "subscription-key",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": [ ]
+    },
+    {
+      "apiKeyQuery": [ ]
+    }
+  ]
+}

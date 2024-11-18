@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "displayName": "YCRM Outlook Plugin",
+    "scope": "/subscriptions/60c5205c-b580-40d1-b796-5cecad0380e2/resourceGroups/APIV3/providers/Microsoft.ApiManagement/service/ych-stage/apis/645a7f0276e6cae301426d13",
+    "allowTracing": false,
+    "state": "active"
+  }
+}
