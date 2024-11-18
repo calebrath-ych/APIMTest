@@ -1,0 +1,196 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "YCRM",
+    "description": "Import from \"YchApiv3-Stage\" Function App",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://apiv3-stage.yakimachief.com/ycrm"
+    }
+  ],
+  "paths": {
+    "/customers/{customerCode}/contacts": {
+      "get": {
+        "summary": "GetCustomerContacts",
+        "operationId": "get-getcustomercontacts",
+        "parameters": [
+          {
+            "name": "customerCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/customers/{customerCode}/information": {
+      "get": {
+        "summary": "GetCustomerInformation",
+        "operationId": "get-getcustomerinformation",
+        "parameters": [
+          {
+            "name": "customerCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/user/{userId}/ycrm/notifications/settings": {
+      "get": {
+        "summary": "GetYcrmUserNotificationSettings",
+        "operationId": "get-getycrmusernotificationsettings",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/user/{userId}/ycrm/notifications": {
+      "get": {
+        "summary": "GetYcrmUserNotifications",
+        "operationId": "get-getycrmusernotifications",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/ycrm/notification/": {
+      "post": {
+        "summary": "PostYcrmNotification",
+        "operationId": "post-postycrmnotification",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/customer-types": {
+      "get": {
+        "summary": "GetCustomerTypes",
+        "operationId": "getcustomertypes",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/configuration/{systemName}/version": {
+      "get": {
+        "summary": "VerifyMobileClientVersion",
+        "operationId": "get-verifymobileclientversion",
+        "parameters": [
+          {
+            "name": "systemName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/proxy/eis/post": {
+      "post": {
+        "summary": "EisPostProxy",
+        "operationId": "post-eispostproxy",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/customers/{customerCode}/addresses": {
+      "get": {
+        "summary": "GetCustomerAddresses",
+        "operationId": "get-getcustomeraddresses",
+        "parameters": [
+          {
+            "name": "customerCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "apiKeyHeader": {
+        "type": "apiKey",
+        "name": "Ocp-Apim-Subscription-Key",
+        "in": "header"
+      },
+      "apiKeyQuery": {
+        "type": "apiKey",
+        "name": "subscription-key",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": [ ]
+    },
+    {
+      "apiKeyQuery": [ ]
+    }
+  ]
+}

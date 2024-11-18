@@ -1,0 +1,228 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "LIMS",
+    "description": "Import from \"YchApiv3-Stage\" Function App",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://apiv3-stage.yakimachief.com/lims"
+    }
+  ],
+  "paths": {
+    "/varieties/list": {
+      "get": {
+        "summary": "GetVarietyCodeAndNameMap",
+        "operationId": "get-getvarietycodeandnamemap",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/grower-portal/lots/{lotNumber}/analytics": {
+      "post": {
+        "summary": "UpdateGrowerPortalLotAnalytics",
+        "operationId": "post-updategrowerportallotanalytics",
+        "parameters": [
+          {
+            "name": "lotNumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/lots/{lotNumber}/harvest-data": {
+      "get": {
+        "summary": "GetLotHarvestData",
+        "operationId": "get-getlotharvestdata",
+        "parameters": [
+          {
+            "name": "lotNumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/{growerId}/fields": {
+      "get": {
+        "summary": "GetGrowerFields",
+        "operationId": "get-getgrowerfields",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/grower-portal/notification/": {
+      "post": {
+        "summary": "PostGrowerPortalNotification",
+        "operationId": "post-postgrowerportalnotification",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/{growerId}": {
+      "get": {
+        "summary": "GetGrower",
+        "operationId": "get-getgrower",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/{growerId}/fields-1": {
+      "get": {
+        "summary": "GetGrowerFields-1",
+        "operationId": "get-getgrowerfields-1",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers": {
+      "get": {
+        "summary": "GetGrowers",
+        "operationId": "6109815ec45e21b396ceca2f",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/lots/{lotNumber}/analytics/": {
+      "get": {
+        "summary": "GetLotAnalytics",
+        "operationId": "get-getlotanalytics",
+        "parameters": [
+          {
+            "name": "lotNumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/lots/analytics": {
+      "get": {
+        "summary": "GetMultiLotAnalytics",
+        "operationId": "get-getmultilotanalytics",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/sample/meta/{sampleId}/scada": {
+      "get": {
+        "summary": "GetSampleMeta",
+        "operationId": "get-getsamplemeta",
+        "parameters": [
+          {
+            "name": "sampleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "apiKeyHeader": {
+        "type": "apiKey",
+        "name": "Ocp-Apim-Subscription-Key",
+        "in": "header"
+      },
+      "apiKeyQuery": {
+        "type": "apiKey",
+        "name": "subscription-key",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": [ ]
+    },
+    {
+      "apiKeyQuery": [ ]
+    }
+  ]
+}

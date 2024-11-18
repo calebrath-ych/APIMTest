@@ -1,0 +1,48 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Ignition",
+    "description": "Import from \"YchApiv3-Stage\" Function App",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://apiv3-stage.yakimachief.com/ignition"
+    }
+  ],
+  "paths": {
+    "/proxy/solochain/post": {
+      "post": {
+        "summary": "SolochainPostProxy",
+        "operationId": "post-solochainpostproxy",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "apiKeyHeader": {
+        "type": "apiKey",
+        "name": "Ocp-Apim-Subscription-Key",
+        "in": "header"
+      },
+      "apiKeyQuery": {
+        "type": "apiKey",
+        "name": "subscription-key",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": [ ]
+    },
+    {
+      "apiKeyQuery": [ ]
+    }
+  ]
+}

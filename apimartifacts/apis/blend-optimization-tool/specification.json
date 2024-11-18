@@ -1,0 +1,101 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Blend Optimization Tool",
+    "description": "Import from \"YchApiv3-Stage\" Function App",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://apiv3-stage.yakimachief.com/bot"
+    }
+  ],
+  "paths": {
+    "/proxy/post": {
+      "post": {
+        "summary": "PostProxy",
+        "operationId": "post-postproxy",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/work-order/{workOrderNumber}": {
+      "get": {
+        "summary": "GetWorkOrderDetails",
+        "operationId": "get-getworkorderdetails",
+        "parameters": [
+          {
+            "name": "workOrderNumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/work-orders/queue/{workOrderCode}": {
+      "delete": {
+        "summary": "DeleteQueuedWorkOrder",
+        "operationId": "delete-deletequeuedworkorder",
+        "parameters": [
+          {
+            "name": "workOrderCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/work-orders/queue": {
+      "get": {
+        "summary": "GetWorkOrderQueue",
+        "operationId": "get-getworkorderqueue",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "apiKeyHeader": {
+        "type": "apiKey",
+        "name": "Ocp-Apim-Subscription-Key",
+        "in": "header"
+      },
+      "apiKeyQuery": {
+        "type": "apiKey",
+        "name": "subscription-key",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": [ ]
+    },
+    {
+      "apiKeyQuery": [ ]
+    }
+  ]
+}

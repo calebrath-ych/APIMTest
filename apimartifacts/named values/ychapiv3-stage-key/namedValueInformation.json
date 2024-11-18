@@ -1,0 +1,11 @@
+{
+  "properties": {
+    "displayName": "ychapiv3-stage-key",
+    "secret": true,
+    "tags": [
+      "key",
+      "function",
+      "auto"
+    ]
+  }
+}

@@ -1,0 +1,822 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Grower Portal Mobile",
+    "description": "Import from \"YchApiv3-Stage\" Function App",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://apiv3-stage.yakimachief.com/gpm"
+    }
+  ],
+  "paths": {
+    "/growers/{growerId}/fields/geojson": {
+      "get": {
+        "summary": "GetGrowerFieldsGeojson",
+        "operationId": "get-getgrowerfieldsgeojson",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/{growerId}/points/{pointTypeId}/geojson": {
+      "get": {
+        "summary": "GetGrowerPointsGeojson",
+        "operationId": "get-getgrowerpointsgeojson",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          },
+          {
+            "name": "pointTypeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/{growerId}/fields": {
+      "get": {
+        "summary": "GetGrowerFields",
+        "operationId": "get-getgrowerfields",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/{growerId}/config": {
+      "get": {
+        "summary": "GetGrowerMobileConfig",
+        "operationId": "get-getgrowermobileconfig",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/{growerId}/points/{pointTypeId}": {
+      "get": {
+        "summary": "GetGrowerPoints",
+        "operationId": "get-getgrowerpoints",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          },
+          {
+            "name": "pointTypeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/proxy/post": {
+      "post": {
+        "summary": "PostProxy",
+        "operationId": "post-postproxy",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/{growerId}/harvest-data": {
+      "get": {
+        "summary": "GetGrowerHarvestData",
+        "operationId": "get-getgrowerharvestdata",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/{growerId}/map": {
+      "get": {
+        "summary": "GetGrowerMapLayers",
+        "operationId": "get-getgrowermaplayers",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/{growerId}/user/{userId}/notifications/settings": {
+      "get": {
+        "summary": "GetGrowerPortalUserNotificationSettings",
+        "operationId": "get-getgrowerportalusernotificationsettings",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/grower-portal/config": {
+      "get": {
+        "summary": "GetMobileConfig",
+        "operationId": "get-getmobileconfig",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/user/{userId}/notifications": {
+      "get": {
+        "summary": "GetGrowerPortalUserNotifications",
+        "operationId": "get-getgrowerportalusernotifications",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/varieties/": {
+      "get": {
+        "summary": "GetVarieties",
+        "operationId": "get-getvarieties",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/{growerId}/user/{userId}/notifications/daily-digest": {
+      "get": {
+        "summary": "GetGrowerPortalDailyDigestSetting",
+        "operationId": "get-getgrowerportaldailydigestsetting",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/{growerId}/feature": {
+      "get": {
+        "summary": "GetFeatureByCoordinates",
+        "operationId": "get-getfeaturebycoordinates",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/grower-portal/notification/": {
+      "post": {
+        "summary": "PostGrowerPortalNotification",
+        "operationId": "post-postgrowerportalnotification",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/{growerId}/pre-harvest-requests": {
+      "get": {
+        "summary": "GetPreHarvestByGrower",
+        "operationId": "get-getpreharvestbygrower",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/varieties/list": {
+      "get": {
+        "summary": "GetVarietyCodeAndNameMap",
+        "operationId": "get-getvarietycodeandnamemap",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/fields/{fieldId}/meta": {
+      "get": {
+        "summary": "GetGrowerFieldMetaData",
+        "operationId": "get-getgrowerfieldmetadata",
+        "parameters": [
+          {
+            "name": "fieldId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/subarea/{subAreaId}": {
+      "get": {
+        "summary": "GetGrowerSubArea",
+        "operationId": "get-getgrowersubarea",
+        "parameters": [
+          {
+            "name": "subAreaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/grower-details/": {
+      "get": {
+        "summary": "GetGrowersDetails",
+        "operationId": "get-getgrowersdetails",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/configuration/{systemName}/version": {
+      "get": {
+        "summary": "VerifyMobileClientVersion",
+        "operationId": "get-verifymobileclientversion",
+        "parameters": [
+          {
+            "name": "systemName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/user/{userId}/roguing/schedules/": {
+      "get": {
+        "summary": "GetUserRoguingSchedules",
+        "operationId": "get-getuserroguingschedules",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/{growerId}/spray-records": {
+      "get": {
+        "summary": "GetGrowerSprayRecords",
+        "operationId": "get-getgrowersprayrecords",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/{growerId}/deliveries/": {
+      "get": {
+        "summary": "GetGrowerDeliveries",
+        "operationId": "get-getgrowerdeliveries",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/{growerId}/delivery-details": {
+      "get": {
+        "summary": "GetGrowerDeliveryDetails",
+        "operationId": "get-getgrowerdeliverydetails",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/roguing/schedules/": {
+      "get": {
+        "summary": "GetRoguingSchedules",
+        "operationId": "get-getroguingschedules",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/roguing/teams/": {
+      "get": {
+        "summary": "GetRoguingTeams",
+        "operationId": "get-getroguingteams",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/roguing/schedule/{scheduleId}": {
+      "get": {
+        "summary": "GetRoguingSchedule",
+        "operationId": "get-getroguingschedule",
+        "parameters": [
+          {
+            "name": "scheduleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/proxy/get": {
+      "get": {
+        "summary": "GetProxy",
+        "operationId": "get-getproxy",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/{growerId}/map-1": {
+      "get": {
+        "summary": "GetGrowerMapLayers-1",
+        "operationId": "get-getgrowermaplayers-1",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/fields/{fieldId}/kiln-sample-reports": {
+      "get": {
+        "summary": "GetGrowerFieldKilnSampleReport",
+        "operationId": "get-getgrowerfieldkilnsamplereport",
+        "parameters": [
+          {
+            "name": "fieldId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/kiln-sample-reports": {
+      "get": {
+        "summary": "GetKilnSampleReport",
+        "operationId": "get-getkilnsamplereport",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/{growerId}/brewer-feedback": {
+      "get": {
+        "summary": "GetGrowerBrewerFeedback",
+        "operationId": "get-getgrowerbrewerfeedback",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/proxy/grower-portal/post": {
+      "post": {
+        "summary": "GrowerPortalPostProxy",
+        "operationId": "post-growerportalpostproxy",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/proxy/grower-portal/get": {
+      "get": {
+        "summary": "GrowerPortalGetProxy",
+        "operationId": "get-growerportalgetproxy",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/grower-portal/harvest-windows": {
+      "get": {
+        "summary": "GetHarvestWindows",
+        "operationId": "get-getharvestwindows",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/{growerId}/fields/warnings/": {
+      "get": {
+        "summary": "GetGrowerFieldWarnings",
+        "operationId": "get-getgrowerfieldwarnings",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/growers/{growerId}/harvest-exception-requests": {
+      "get": {
+        "summary": "GetGrowerHarvestExceptionRequests",
+        "operationId": "get-getgrowerharvestexceptionrequests",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/user/{userId}/facility-assessments/drafted/": {
+      "get": {
+        "summary": "GetUserDraftedFacilityAssessments",
+        "operationId": "get-getuserdraftedfacilityassessments",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/grower/{growerId}/facility-assessments/completed/": {
+      "get": {
+        "summary": "GetGrowerCompletedFacilityAssessments",
+        "operationId": "get-getgrowercompletedfacilityassessments",
+        "parameters": [
+          {
+            "name": "growerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/agronomy-hub": {
+      "get": {
+        "summary": "GetAgronomyHubEntries",
+        "operationId": "get-getagronomyhubentries",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/grower-regions": {
+      "get": {
+        "summary": "GetGrowerRegions",
+        "operationId": "get-getgrowerregions",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/grower-regions/{region}/pre-harvest-requests": {
+      "get": {
+        "summary": "GetPreHarvestRequestsByRegion",
+        "operationId": "get-getpreharvestrequestsbyregion",
+        "parameters": [
+          {
+            "name": "region",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "apiKeyHeader": {
+        "type": "apiKey",
+        "name": "Ocp-Apim-Subscription-Key",
+        "in": "header"
+      },
+      "apiKeyQuery": {
+        "type": "apiKey",
+        "name": "subscription-key",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": [ ]
+    },
+    {
+      "apiKeyQuery": [ ]
+    }
+  ]
+}
