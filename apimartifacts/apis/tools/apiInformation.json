@@ -3,7 +3,7 @@
     "path": "tools",
     "apiRevision": "1",
     "authenticationSettings": {},
-    "description": "Import from \"{{api-instance-display-name}}\" Function App",
+    "description": "Import from \"{{api-instance-name}}\" Function App",
     "isCurrent": true,
     "displayName": "Tools",
     "protocols": [
