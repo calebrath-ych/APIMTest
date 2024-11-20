@@ -1,7 +1,7 @@
 <policies>
 	<inbound>
 		<base />
-		<set-backend-service id="apim-generated-policy" backend-id="ychapiv3-stage" />
+		<set-backend-service id="apim-generated-policy" backend-id="ychapiv3-test" />
 	</inbound>
 	<backend>
 		<base />

@@ -9,14 +9,9 @@
     - Policies are applied in the order of their appearance, from the top down.
 -->
 <policies>
-	<inbound>
-		<set-header name="ApimPath" exists-action="override">
-			<value>@(context.Request.OriginalUrl.Path)</value>
-		</set-header>
-	</inbound>
+	<inbound></inbound>
 	<backend>
 		<forward-request />
 	</backend>
-	<outbound />
-	<on-error />
+	<outbound></outbound>
 </policies>
