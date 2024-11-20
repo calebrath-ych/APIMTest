@@ -1,8 +1,9 @@
 {
   "properties": {
-    "displayName": "ychapiv3-key",
+    "displayName": "api-function-key",
     "secret": true,
     "tags": [
+      "api",
       "key",
       "function",
       "auto"

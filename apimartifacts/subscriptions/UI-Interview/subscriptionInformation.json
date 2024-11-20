@@ -1,7 +1,7 @@
 {
   "properties": {
     "displayName": "UI-Interview",
-    "scope": "/subscriptions/60c5205c-b580-40d1-b796-5cecad0380e2/resourceGroups/APIV3/providers/Microsoft.ApiManagement/service/ych-stage/apis/ui-interview",
+    "scope": "/subscriptions/60c5205c-b580-40d1-b796-5cecad0380e2/resourceGroups/APIV3/providers/Microsoft.ApiManagement/service/{{apim-instance-name}}/apis/ui-interview",
     "allowTracing": false,
     "state": "active"
   }

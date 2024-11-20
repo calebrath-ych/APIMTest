@@ -1,0 +1,9 @@
+{
+  "properties": {
+    "displayName": "api-instance-name",
+    "secret": false,
+    "tags": [
+      "api"
+    ]
+  }
+}

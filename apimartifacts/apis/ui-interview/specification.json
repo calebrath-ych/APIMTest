@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://apiv3-stage.yakimachief.com/interview"
+      "url": "{{apim-base-url}}/interview"
     }
   ],
   "paths": {

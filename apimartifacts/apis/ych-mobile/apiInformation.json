@@ -1,15 +1,14 @@
 {
   "properties": {
-    "path": "ycrm-outlook",
+    "path": "ych-mobile",
     "apiRevision": "1",
     "authenticationSettings": {},
-    "description": "Import from \u0022YchApiv3-Stage\u0022 Function App",
+    "description": "Import from \"{{api-instance-display-name}}\" Function App",
     "isCurrent": true,
-    "displayName": "YCRM Outlook",
+    "displayName": "YCH Mobile",
     "protocols": [
       "https"
     ],
-    "serviceUrl": "https://apiv3-stage.yakimachief.com/ycrm-outlook",
     "subscriptionKeyParameterNames": {
       "header": "Ocp-Apim-Subscription-Key",
       "query": "subscription-key"

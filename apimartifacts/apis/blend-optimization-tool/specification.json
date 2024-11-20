@@ -2,12 +2,12 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Blend Optimization Tool",
-    "description": "Import from \"YchApiv3-Stage\" Function App",
+    "description": "Import from \"{{api-instance-display-name}}\" Function App",
     "version": "1.0"
   },
   "servers": [
     {
-      "url": "https://apiv3-stage.yakimachief.com/bot"
+      "url": "{{apim-base-url}}/bot"
     }
   ],
   "paths": {

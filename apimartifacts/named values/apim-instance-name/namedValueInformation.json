@@ -1,8 +1,9 @@
 {
   "properties": {
-    "displayName": "ychapiv3-stage-key",
+    "displayName": "apim-instance-name",
     "secret": true,
     "tags": [
+      "apim",
       "key",
       "function",
       "auto"
