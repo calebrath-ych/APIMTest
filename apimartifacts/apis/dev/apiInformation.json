@@ -3,7 +3,7 @@
     "path": "",
     "apiRevision": "1",
     "authenticationSettings": {},
-    "description": "Import from \u0022YchApiv3-Stage\u0022 Function App",
+    "description": "Import from \u0022YchApiv3-Test\u0022 Function App",
     "isCurrent": true,
     "displayName": "DEV",
     "protocols": [

@@ -1,0 +1,11 @@
+{
+  "properties": {
+    "displayName": "ychapiv3-test-key",
+    "secret": true,
+    "tags": [
+      "key",
+      "function",
+      "auto"
+    ]
+  }
+}
