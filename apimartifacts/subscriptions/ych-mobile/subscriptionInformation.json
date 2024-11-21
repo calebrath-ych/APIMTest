@@ -1,7 +1,7 @@
 {
   "properties": {
     "displayName": "YCH Mobile",
-    "scope": "/subscriptions/60c5205c-b580-40d1-b796-5cecad0380e2/resourceGroups/APIV3/providers/Microsoft.ApiManagement/service/{{apim-instance-name}}/apis/66982a0710d5ae32efc9bad7",
+    "scope": "/subscriptions/60c5205c-b580-40d1-b796-5cecad0380e2/resourceGroups/APIV3/providers/Microsoft.ApiManagement/service/{{apim-instance-name}}/apis/ych-mobile",
     "allowTracing": false,
     "state": "active"
   }
