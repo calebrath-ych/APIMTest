@@ -24,7 +24,3 @@ namedValues:
     properties:
       displayName: apim-instance-name
       value: ych-test
-loggers:
-diagnostics:
-backends:
-apis:
