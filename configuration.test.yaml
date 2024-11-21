@@ -3,24 +3,24 @@ namedValues:
   - name: api-description
     properties:
       displayName: api-description
-      value: YchApiv3-Test
+      value: "YchApiv3-Test"
   - name: api-function-key
     properties:
       displayName: api-function-key
-      value: {{ ychapiv3-test-key }}
+      value: "{{ ychapiv3-test-key }}"
   - name: api-instance-name
     properties:
       displayName: api-function-key
-      value: YchApiv3-Test
+      value: "YchApiv3-Test"
   - name: api-url
     properties:
       displayName: api-url
-      value: https://ychapiv3-test.azurewebsites.net/api
+      value: "https://ychapiv3-test.azurewebsites.net/api"
   - name: apim-base-url
     properties:
       displayName: apim-base-url
-      value: https://apiv3-test.yakimachief.com
+      value: "https://apiv3-test.yakimachief.com"
   - name: apim-instance-name
     properties:
       displayName: apim-instance-name
-      value: ych-test
+      value: "ych-test"
