@@ -1,15 +1,5 @@
 {
   "properties": {
-    "credentials": {
-      "header": {
-        "x-functions-key": [
-          "{{api-function-key}}"
-        ]
-      }
-    },
-    "description": "{{api-description}}",
     "protocol": "http",
-    "resourceId": "https://management.azure.com/subscriptions/60c5205c-b580-40d1-b796-5cecad0380e2/resourceGroups/APIV3/providers/Microsoft.Web/sites/YchApiv3-Test",
-    "url": "{{api-url}}"
   }
 }

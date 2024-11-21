@@ -1,9 +1,5 @@
 apimServiceName: ych-test
 namedValues:
-  - name: api-description
-    properties:
-      displayName: api-description
-      value: "YchApiv3-Test"
   - name: api-function-key
     properties:
       displayName: api-function-key
@@ -12,10 +8,6 @@ namedValues:
     properties:
       displayName: api-instance-name
       value: "YchApiv3-Test"
-  - name: api-url
-    properties:
-      displayName: api-url
-      value: "https://ychapiv3-test.azurewebsites.net/api"
   - name: apim-base-url
     properties:
       displayName: apim-base-url
@@ -24,3 +16,14 @@ namedValues:
     properties:
       displayName: apim-instance-name
       value: "ych-test"
+backends:
+  - name: ychapiv3
+    properties:
+      description: "Ych APIv3 Functions Test Environment."
+      url: "https://ychapiv3-test.azurewebsites.net/api"
+      resourceId: "https://management.azure.com/subscriptions/60c5205c-b580-40d1-b796-5cecad0380e2/resourceGroups/APIV3/providers/Microsoft.Web/sites/YchApiv3-Test"
+      credentials:
+        header:
+          "x-functions-key": [
+            "{{api-function-key}}"
+          ]

@@ -5,11 +5,6 @@
     "description": "Import from \"{{api-instance-name}}\" Function App",
     "version": "1.0"
   },
-  "servers": [
-    {
-      "url": "{{apim-base-url}}/tools"
-    }
-  ],
   "paths": {
     "/lots/{lotNumber}/analytics/": {
       "get": {
