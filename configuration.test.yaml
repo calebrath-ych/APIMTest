@@ -10,7 +10,7 @@ namedValues:
       value: "{{ ychapiv3-test-key }}"
   - name: api-instance-name
     properties:
-      displayName: api-function-key
+      displayName: api-instance-name
       value: "YchApiv3-Test"
   - name: api-url
     properties:
