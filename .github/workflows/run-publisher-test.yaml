@@ -34,17 +34,17 @@ jobs:
     needs: get-commit
     uses: ./.github/workflows/run-publisher-with-env.yaml
     with:
-      API_MANAGEMENT_ENVIRONMENT: test # change this to match the dev environment created in settings
+      API_MANAGEMENT_ENVIRONMENT: test 
       COMMIT_ID: ${{ needs.get-commit.outputs.commit_id }}
-      API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: apimartifacts # change this to the artifacts folder
+      API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: apimartifacts 
     secrets: inherit
 
-  #Publish without Commit ID. Publishes all artifacts that reside in the artifacts forlder
+  #Publish without Commit ID. Publishes all artifacts that reside in the artifacts folder
   Push-Changes-To-APIM-Without-Commit-ID:
     if: ( github.event.inputs.COMMIT_ID_CHOICE == 'publish-all-artifacts-in-repo' )
     needs: get-commit
     uses: ./.github/workflows/run-publisher-with-env.yaml
     with:
-      API_MANAGEMENT_ENVIRONMENT: test # change this to match the dev environment created in settings
-      API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: apimartifacts # change this to the artifacts folder
+      API_MANAGEMENT_ENVIRONMENT: test 
+      API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: apimartifacts 
     secrets: inherit
