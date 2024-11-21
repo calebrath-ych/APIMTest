@@ -20,7 +20,7 @@ backends:
   - name: ychapiv3
     properties:
       description: "Ych APIv3 Functions Test Environment."
-      url: "https://ychapiv3-test.azurewebsites.net/api"
+      url: "https://apiv3-stage.yakimachief.com"
       resourceId: "https://management.azure.com/subscriptions/60c5205c-b580-40d1-b796-5cecad0380e2/resourceGroups/APIV3/providers/Microsoft.Web/sites/YchApiv3-Test"
       credentials:
         header:
