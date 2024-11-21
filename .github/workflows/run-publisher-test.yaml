@@ -47,4 +47,5 @@ jobs:
     with:
       API_MANAGEMENT_ENVIRONMENT: test 
       API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: apimartifacts 
+      CONFIGURATION_YAML_PATH: configuration.test.yaml
     secrets: inherit
