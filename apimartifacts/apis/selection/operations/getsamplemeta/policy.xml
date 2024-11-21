@@ -13,7 +13,7 @@
 <policies>
 	<inbound>
 		<base />
-		<set-backend-service id="apim-generated-policy" backend-id="{{api-instance-name}}" />
+		<set-backend-service id="apim-generated-policy" backend-id="ychapiv3" />
 	</inbound>
 	<backend>
 		<base />

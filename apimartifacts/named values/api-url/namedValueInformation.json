@@ -1,9 +1,0 @@
-{
-  "properties": {
-    "displayName": "api-url",
-    "secret": false,
-    "tags": [
-      "api"
-    ]
-  }
-}
