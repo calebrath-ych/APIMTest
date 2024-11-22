@@ -1,9 +1,5 @@
 apimServiceName: ych-test
 namedValues:
-  - name: api-function-key
-    properties:
-      displayName: api-function-key
-      value: "{{ ychapiv3-test-key }}"
   - name: api-instance-name
     properties:
       displayName: api-instance-name
@@ -25,5 +21,5 @@ backends:
       credentials:
         header:
           "x-functions-key": [
-            "{{api-function-key}}"
+            "{{ychapiv3-test-key}}"
           ]
