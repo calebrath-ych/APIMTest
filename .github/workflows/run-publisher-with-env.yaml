@@ -26,6 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{ inputs.API_MANAGEMENT_ENVIRONMENT }}
     steps:
+      - run: echo ${{ inputs.COMMIT_ID }}
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
         with:
@@ -63,7 +64,6 @@ jobs:
           API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: ${{ GITHUB.WORKSPACE }}/${{ inputs.API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH }}
           COMMIT_ID: ${{ inputs.COMMIT_ID }}
         run: |
-          echo ${{ inputs.COMMIT_ID }}
           Set-StrictMode -Version Latest
           $ErrorActionPreference = "Stop"
           $VerbosePreference = "Continue"
