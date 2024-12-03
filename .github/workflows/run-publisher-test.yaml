@@ -2,9 +2,9 @@ name: Run - Publisher TEST
 
 on:
   # Triggers the workflow on pull request events but only for the main branch
-  pull_request:
-    branches: [test]
-    types: [closed]
+  push:
+    branches:
+      - [API-1-Move-APIM-definitions-to-GitHub-Repo]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -36,7 +36,8 @@ jobs:
     with:
       API_MANAGEMENT_ENVIRONMENT: test 
       COMMIT_ID: ${{ needs.get-commit.outputs.commit_id }}
-      API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: apimartifacts 
+      API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: Ych.Api/Apim/Definitions
+      CONFIGURATION_YAML_PATH: configuration.test.yaml
     secrets: inherit
 
   #Publish without Commit ID. Publishes all artifacts that reside in the artifacts folder
@@ -46,6 +47,6 @@ jobs:
     uses: ./.github/workflows/run-publisher-with-env.yaml
     with:
       API_MANAGEMENT_ENVIRONMENT: test 
-      API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: apimartifacts 
+      API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: Ych.Api/Apim/Definitions
       CONFIGURATION_YAML_PATH: configuration.test.yaml
     secrets: inherit
