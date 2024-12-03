@@ -22,10 +22,12 @@ jobs:
   get-commit:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Set Short SHA
         id: vars
         shell: bash
-        run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+        run: echo "sha_short=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
     outputs:
       commit_id: ${{ steps.vars.outputs.sha_short }}
   #Publish with Commit ID
