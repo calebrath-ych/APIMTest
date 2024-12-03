@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "YCRM",
+    "title": "CALEB",
     "description": "Import from \"{{api-instance-name}}\" Function App",
     "version": "1.0"
   },

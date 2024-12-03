@@ -1,6 +1,6 @@
 {
   "properties": {
-    "path": "ycrm",
+    "path": "calebs-test",
     "apiRevision": "1",
     "authenticationSettings": {},
     "description": "Import from \"{{api-instance-name}}\" Function App",
