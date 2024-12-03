@@ -36,7 +36,7 @@ jobs:
     with:
       API_MANAGEMENT_ENVIRONMENT: test 
       COMMIT_ID: ${{ needs.get-commit.outputs.commit_id }}
-      API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: Ych.Api/Apim/Definitions
+      API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: apimartifacts
       CONFIGURATION_YAML_PATH: configuration.test.yaml
     secrets: inherit
 
@@ -47,6 +47,6 @@ jobs:
     uses: ./.github/workflows/run-publisher-with-env.yaml
     with:
       API_MANAGEMENT_ENVIRONMENT: test 
-      API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: Ych.Api/Apim/Definitions
+      API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: apimartifacts
       CONFIGURATION_YAML_PATH: configuration.test.yaml
     secrets: inherit
