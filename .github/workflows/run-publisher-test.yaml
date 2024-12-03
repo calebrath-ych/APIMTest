@@ -4,7 +4,7 @@ on:
   # Triggers the workflow on pull request events but only for the main branch
   push:
     branches:
-      - [API-1-Move-APIM-definitions-to-GitHub-Repo]
+      - API-1-Move-APIM-definitions-to-GitHub-Repo
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
