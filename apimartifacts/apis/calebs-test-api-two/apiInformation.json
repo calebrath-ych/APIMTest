@@ -5,7 +5,7 @@
     "authenticationSettings": {},
     "description": "Import from \"{{api-instance-name}}\" Function App",
     "isCurrent": true,
-    "displayName": "Caleb's Test",
+    "displayName": "Caleb's Test Two",
     "protocols": [
       "https"
     ],

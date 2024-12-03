@@ -5,7 +5,7 @@
     "authenticationSettings": {},
     "description": "Import from \"{{api-instance-name}}\" Function App",
     "isCurrent": true,
-    "displayName": "YCRM",
+    "displayName": "Caleb's Test",
     "protocols": [
       "https"
     ],
