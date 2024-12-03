@@ -22,14 +22,12 @@ jobs:
   get-commit:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Set Short SHA
+      - name: Get Commit Hash
         id: vars
         shell: bash
-        run: echo "sha_short=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+        run: echo "commit_id=${GITHUB_SHA}" >> $GITHUB_OUTPUT
     outputs:
-      commit_id: ${{ steps.vars.outputs.sha_short }}
+      commit_id: ${{ steps.vars.outputs.commit_id }}
   #Publish with Commit ID
   Push-Changes-To-APIM-With-Commit-ID:
     if: (github.event.inputs.COMMIT_ID_CHOICE == 'publish-artifacts-in-last-commit' || github.event.inputs.COMMIT_ID_CHOICE == '')
