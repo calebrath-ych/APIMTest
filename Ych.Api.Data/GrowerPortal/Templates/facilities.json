@@ -1,0 +1,23 @@
+{
+  "type": "Resource",
+  "source": "GrowerPortal",
+  "name": "facilities",
+  "table": "facilities",
+  "primaryKey": "id",
+  "columns": [
+    { "name": "id" },
+    { "name": "name" },
+    { "name": "created_at" },
+    { "name": "updated_at" }
+  ],
+  "views": [
+    {
+      "name": "type",
+      "columns": [
+        {
+          "name": "type"
+        }
+      ]
+    }
+  ]
+}

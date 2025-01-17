@@ -1,0 +1,54 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "YCRM Outlook",
+    "description": "Created from ApimDefinitionManager",
+    "version": "1.0"
+  },
+  "paths": {
+    "/proxy/ycrm/post": {
+      "post": {
+        "summary": "YcrmPostProxy",
+        "operationId": "post-ycrmpostproxy",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/proxy/ycrm/get": {
+      "get": {
+        "summary": "YcrmGetProxy",
+        "operationId": "get-ycrmgetproxy",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "apiKeyHeader": {
+        "type": "apiKey",
+        "name": "Ocp-Apim-Subscription-Key",
+        "in": "header"
+      },
+      "apiKeyQuery": {
+        "type": "apiKey",
+        "name": "subscription-key",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": [ ]
+    },
+    {
+      "apiKeyQuery": [ ]
+    }
+  ]
+}

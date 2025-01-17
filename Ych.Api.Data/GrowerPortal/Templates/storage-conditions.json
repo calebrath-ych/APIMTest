@@ -1,0 +1,24 @@
+{
+  "type": "Resource",
+  "source": "GrowerPortal",
+  "name": "storage-conditions",
+  "table": "storage_conditions",
+  "primaryKey": "id",
+  "columns": [
+    { "name": "id" },
+    { "name": "type" },
+    { "name": "notes" },
+    { "name": "created_at" },
+    { "name": "updated_at" }
+  ],
+  "views": [
+    {
+      "name": "type",
+      "columns": [
+        {
+          "name": "type"
+        }
+      ]
+    }
+  ]
+}

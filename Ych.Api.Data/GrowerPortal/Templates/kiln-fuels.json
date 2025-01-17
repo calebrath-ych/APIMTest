@@ -1,0 +1,13 @@
+{
+  "type": "Resource",
+  "source": "GrowerPortal",
+  "name": "kiln-fuels",
+  "table": "kiln_fuels",
+  "primaryKey": "id",
+  "columns": [
+    { "name": "id" },
+    { "name": "type" },
+    { "name": "created_at" },
+    { "name": "updated_at" }
+  ]
+}

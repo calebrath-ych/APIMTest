@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "path": "ycrm",
+    "apiRevision": "1",
+    "authenticationSettings": {},
+    "description": "Created from ApimDefinitionManager",
+    "isCurrent": true,
+    "displayName": "YCRM",
+    "protocols": [
+      "https"
+    ],
+    "subscriptionKeyParameterNames": {
+      "header": "Ocp-Apim-Subscription-Key",
+      "query": "subscription-key"
+    },
+    "subscriptionRequired": true
+  }
+}

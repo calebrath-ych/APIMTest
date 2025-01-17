@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <None Remove="GrowerPortal\Templates\harvest-datasheets\harvest-information.json" />
+    <None Remove="GrowerPortal\Templates\harvest-datasheets\views\harvest-information.json" />
+    <None Remove="GrowerPortal\Templates\harvest-datasheets\views\summary.json" />
+    <None Remove="X3\Templates\bale-inventories.json" />
+    <None Remove="Sensory\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="GrowerPortal\Templates\facilities.json" />
+    <EmbeddedResource Include="GrowerPortal\Templates\harvest-datasheets\views\summary.json" />
+    <EmbeddedResource Include="GrowerPortal\Templates\harvest-datasheets\views\harvest-information.json" />
+    <EmbeddedResource Include="GrowerPortal\Templates\harvest-information.json" />
+    <EmbeddedResource Include="GrowerPortal\Templates\picker-types.json" />
+    <EmbeddedResource Include="GrowerPortal\Templates\kiln-fuels.json" />
+    <EmbeddedResource Include="GrowerPortal\Templates\storage-conditions.json" />
+    <EmbeddedResource Include="GrowerPortal\Templates\harvest-datasheets\harvest-datasheets.json" />
+    <EmbeddedResource Include="X3\Templates\bale-inventories.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.8" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Selection\Models\" />
+    <Folder Include="Sensory\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\YchNet\ych-net\Ych.Data\Ych.Data.csproj" />
+    <ProjectReference Include="..\..\..\YchNet\ych-net\Ych\Ych.csproj" />
+  </ItemGroup>
+</Project>

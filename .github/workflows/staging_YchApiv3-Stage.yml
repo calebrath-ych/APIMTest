@@ -1,0 +1,68 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/azure/functions-action
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build and deploy dotnet core app to Azure Function App - apiv3-stage
+
+on:
+  push:
+    branches:
+      - staging
+  workflow_dispatch:
+
+env:
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.' # set this to the path to your web app project, defaults to the repository root
+  DOTNET_VERSION: '8.0.x' # set this to the dotnet version to use
+
+jobs:
+  build-and-deploy:
+    runs-on: windows-latest
+    steps:
+      - name: 'Checkout GitHub Action'
+        uses: actions/checkout@v2
+
+      - name: Setup DotNet ${{ env.DOTNET_VERSION }} Environment
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      # entry point is /asdasd/apiv3/apiv3 <-
+       
+      - name: Juggle API repo into correct location in ./APIv3/apiv3
+        shell: pwsh
+        run: |
+          pushd ../
+          New-Item -Path "Temp" -ItemType Directory
+          Copy-Item -Path "apiv3" -Destination "Temp/apiv3" -Recurse
+          Move-Item -Path "Temp" -Destination "apiv3/APIv3"
+          popd
+
+      - name: Create directory for ych-net to land in
+        shell: pwsh
+        run: |
+          New-Item -Path "YchNet" -ItemType Directory
+          New-Item -Path "YchNet/ych-net" -ItemType Directory
+
+      - name: Check out YchNet
+        uses: actions/checkout@master
+        with:
+          repository: ychdev/ych-net
+          ref: eis_data
+          token: ${{ secrets.DEPLOYMENT_PAT }}
+          path: YchNet/ych-net
+          
+      - name: Restore project and build
+        shell: pwsh
+        run: |
+          pushd APIv3/apiv3
+          dotnet restore ./YchApiFunctions/YchApiFunctions.csproj
+          dotnet build ./YchApiFunctions/YchApiFunctions.csproj --configuration Release --output ./output
+          popd
+
+      - name: 'Run Azure Functions Action'
+        uses: Azure/functions-action@v1
+        id: fa
+        with:
+          app-name: 'YchApiv3-Stage'
+          slot-name: 'Production'
+          package: 'APIv3/apiv3/output'
+          publish-profile: ${{ secrets.PUBLISH_PROFILE_STAGE }}
