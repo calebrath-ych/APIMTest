@@ -22,12 +22,12 @@ jobs:
   get-commit:
     runs-on: ubuntu-latest
     steps:
-      # Set the COMMIT_ID env variable
-      - name: Set the Commit Id
-        id: commit
-        run: echo "commit_id=${GITHUB_SHA}" >> $GITHUB_ENV
+      - name: Get Commit Hash
+        id: vars
+        shell: bash
+        run: echo "commit_id=${GITHUB_SHA}" >> $GITHUB_OUTPUT
     outputs:
-      commit_id: ${{ steps.commit.outputs.commit_id }}
+      commit_id: ${{ steps.vars.outputs.commit_id }}
   #Publish with Commit ID
   Push-Changes-To-APIM-With-Commit-ID:
     if: (github.event.inputs.COMMIT_ID_CHOICE == 'publish-artifacts-in-last-commit' || github.event.inputs.COMMIT_ID_CHOICE == '')
@@ -36,7 +36,7 @@ jobs:
     with:
       API_MANAGEMENT_ENVIRONMENT: test 
       COMMIT_ID: ${{ needs.get-commit.outputs.commit_id }}
-      API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: Ych.Api/Apim/Definitions
+      API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: apimartifacts
       CONFIGURATION_YAML_PATH: configuration.test.yaml
     secrets: inherit
 
@@ -47,6 +47,6 @@ jobs:
     uses: ./.github/workflows/run-publisher-with-env.yaml
     with:
       API_MANAGEMENT_ENVIRONMENT: test 
-      API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: Ych.Api/Apim/Definitions
+      API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: apimartifacts
       CONFIGURATION_YAML_PATH: configuration.test.yaml
     secrets: inherit
