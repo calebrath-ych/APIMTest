@@ -49,6 +49,7 @@ jobs:
           AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           AZURE_RESOURCE_GROUP_NAME: ${{ secrets.AZURE_RESOURCE_GROUP_NAME }}
           AZURE_FUNCTION_APP_RESOURCE_NAME: ${{ secrets.RESOURCE_NAME }}
+          AZURE_API_MANAGEMENT_RESOURCE_NAME: ${{ secrets.AZURE_API_MANAGEMENT_RESOURCE_NAME }}
 
       - name: Run publisher without Config Yaml but with Commit ID
         if: ( inputs.CONFIGURATION_YAML_PATH == '' &&  inputs.COMMIT_ID != '')
