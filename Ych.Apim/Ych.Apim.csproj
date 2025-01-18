@@ -11,7 +11,7 @@
     <None Remove="definitions\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="definitions\" />
+    <Folder Include="Definitions\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Azure.Functions.Worker" Version="1.23.0" />

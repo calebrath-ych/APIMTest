@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "displayName": "Greeness & Shatter Classifier",
+    "scope": "/subscriptions/{{subscription-guid}}/resourceGroups/{{resource-name}}/providers/Microsoft.ApiManagement/service/{{api-management-resource-name}}/apis/shatter-and-greenness-classifier",
+    "allowTracing": false,
+    "state": "active"
+  }
+}

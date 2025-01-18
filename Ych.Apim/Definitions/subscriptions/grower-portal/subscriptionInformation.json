@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "displayName": "Grower Portal",
+    "scope": "/subscriptions/{{subscription-guid}}/resourceGroups/{{resource-name}}/providers/Microsoft.ApiManagement/service/{{api-management-resource-name}}/apis/grower-portal",
+    "allowTracing": false,
+    "state": "active"
+  }
+}

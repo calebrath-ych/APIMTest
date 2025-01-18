@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "displayName": "Blend Optimization Tool",
+    "scope": "/subscriptions/{{subscription-guid}}/resourceGroups/{{resource-name}}/providers/Microsoft.ApiManagement/service/{{api-management-resource-name}}/apis/blend-optimization-tool",
+    "allowTracing": false,
+    "state": "active"
+  }
+}

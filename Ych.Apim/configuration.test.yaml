@@ -1,23 +1,15 @@
 apimServiceName: ych-test
 namedValues:
-  - name: api-instance-name
+  - name: api-management-resource-name
     properties:
-      displayName: api-instance-name
-      value: "YchApiv3-Test"
-  - name: apim-base-url
-    properties:
-      displayName: apim-base-url
-      value: "https://apiv3-test.yakimachief.com"
-  - name: apim-instance-name
-    properties:
-      displayName: apim-instance-name
-      value: "ych-test"
+      displayName: api-management-resource-name
+      value: "{#AZURE_API_MANAGEMENT_RESOURCE_NAME#}"
 backends:
   - name: ychapiv3
     properties:
       description: "Ych APIv3 Functions Test Environment."
       url: "https://ychapiv3-test.azurewebsites.net/api"
-      resourceId: "https://management.azure.com/subscriptions/60c5205c-b580-40d1-b796-5cecad0380e2/resourceGroups/APIV3/providers/Microsoft.Web/sites/YchApiv3-Test"
+      resourceId: "https://management.azure.com/subscriptions/{#AZURE_SUBSCRIPTION_ID#}/resourceGroups/{#AZURE_RESOURCE_GROUP_NAME#}/providers/Microsoft.Web/sites/{#AZURE_FUNCTION_APP_RESOURCE_NAME#}"
       credentials:
         header:
           "x-functions-key": [

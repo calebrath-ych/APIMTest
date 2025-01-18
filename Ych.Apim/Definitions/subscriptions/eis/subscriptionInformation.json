@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "displayName": "EIS",
+    "scope": "/subscriptions/{{subscription-guid}}/resourceGroups/{{resource-name}}/providers/Microsoft.ApiManagement/service/{{api-management-resource-name}}/apis/eis",
+    "allowTracing": false,
+    "state": "active"
+  }
+}

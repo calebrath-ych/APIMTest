@@ -13,7 +13,5 @@ namespace Ych.Apim
     public class ApimConsoleSettings : IAppSettings
     {
         public static readonly ApimConsoleSettings Instance = new ApimConsoleSettings();
-        public string SubscriptionUuid() => "Apim.SubscriptionUuiD";
-        public string ResourceName() => "Apim.ResourceName";
     }
 }

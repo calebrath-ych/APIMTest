@@ -1,9 +1,0 @@
-{
-  "properties": {
-    "displayName": "subscription-guid",
-    "secret": false,
-    "tags": [
-      "api"
-    ]
-  }
-}

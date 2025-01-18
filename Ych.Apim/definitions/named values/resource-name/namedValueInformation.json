@@ -1,9 +1,0 @@
-{
-  "properties": {
-    "displayName": "resource-name",
-    "secret": false,
-    "tags": [
-      "api"
-    ]
-  }
-}

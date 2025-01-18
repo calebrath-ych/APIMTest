@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "displayName": "Selection",
+    "scope": "/subscriptions/{{subscription-guid}}/resourceGroups/{{resource-name}}/providers/Microsoft.ApiManagement/service/{{api-management-resource-name}}/apis/selection",
+    "allowTracing": false,
+    "state": "active"
+  }
+}

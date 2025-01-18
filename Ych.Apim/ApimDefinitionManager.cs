@@ -198,7 +198,7 @@ public class ApimDefinitionManager
             {
                 displayName = displayName,
                 scope =
-                    $"/subscriptions/{{{{subscription-guid}}}}/resourceGroups/{{{{resource-name}}}}/providers/Microsoft.ApiManagement/service/{{{{apim-instance-name}}}}/apis/{scope}",
+                    $"/subscriptions/{{{{subscription-guid}}}}/resourceGroups/{{{{resource-name}}}}/providers/Microsoft.ApiManagement/service/{{{{api-management-resource-name}}}}/apis/{scope}",
                 allowTracing = false,
                 state = "active"
             }
