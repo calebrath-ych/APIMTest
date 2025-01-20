@@ -3,7 +3,7 @@ namedValues:
   - name: api-management-resource-name
     properties:
       displayName: api-management-resource-name
-      value: "{#AZURE_API_MANAGEMENT_RESOURCE_NAME#}"
+      value: "{#API_MANAGEMENT_SERVICE_NAME#}"
 backends:
   - name: ychapiv3
     properties:
