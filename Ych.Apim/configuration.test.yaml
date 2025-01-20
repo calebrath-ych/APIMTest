@@ -9,7 +9,7 @@ backends:
     properties:
       description: "Ych APIv3 Functions Test Environment."
       url: "https://ychapiv3-test.azurewebsites.net/api"
-      resourceId: "https://management.azure.com/subscriptions/{#AZURE_SUBSCRIPTION_ID#}/resourceGroups/{#AZURE_RESOURCE_GROUP_NAME#}/providers/Microsoft.Web/sites/{#AZURE_FUNCTION_APP_RESOURCE_NAME#}"
+      resourceId: "https://management.azure.com/subscriptions/{#AZURE_SUBSCRIPTION_ID#}/resourceGroups/{#AZURE_RESOURCE_GROUP_NAME#}/providers/Microsoft.Web/sites/{#FUNCTION_APP_RESOURCE_NAME#}"
       credentials:
         header:
           "x-functions-key": [
