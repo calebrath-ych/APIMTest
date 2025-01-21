@@ -157,7 +157,7 @@ namespace Ych.Api.Ycrm
             from customers
                      join customers_users on customers.id = customers_users.customer_id
                      join users on customers_users.user_id = users.id
-                     join representative_types on users.representative_type_id = representative_types.id
+                     left join representative_types on users.representative_type_id = representative_types.id
             where customers.x3_id = ?";
             
             //use SqlQueryToList to execute query and return results

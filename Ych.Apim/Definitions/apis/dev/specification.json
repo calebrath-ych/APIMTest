@@ -792,27 +792,6 @@
         }
       }
     },
-    "/growers/{growerId}/config": {
-      "get": {
-        "summary": "GetGrowerMobileConfig",
-        "operationId": "get-getgrowermobileconfig-1",
-        "parameters": [
-          {
-            "name": "growerId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": ""
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": null
-          }
-        }
-      }
-    },
     "/growers/{growerId}/pre-harvest-requests": {
       "get": {
         "summary": "GetPreHarvestByGrower",
@@ -1093,17 +1072,6 @@
         }
       }
     },
-    "/growers": {
-      "get": {
-        "summary": "GetGrowers",
-        "operationId": "get-getgrower-1",
-        "responses": {
-          "200": {
-            "description": null
-          }
-        }
-      }
-    },
     "/customers": {
       "get": {
         "summary": "GetCustomers",
@@ -1285,27 +1253,6 @@
         }
       }
     },
-    "/growers/{growerId}/deliveries/-1": {
-      "get": {
-        "summary": "GetGrowerDeliveries-1",
-        "operationId": "get-getgrowerdeliveries-1",
-        "parameters": [
-          {
-            "name": "growerId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": ""
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": null
-          }
-        }
-      }
-    },
     "/growers/{growerId}/delivery-details": {
       "get": {
         "summary": "GetGrowerDeliveryDetails",
@@ -1407,27 +1354,6 @@
           },
           {
             "name": "cropYear",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": ""
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": null
-          }
-        }
-      }
-    },
-    "/growers/{growerId}/map-1": {
-      "get": {
-        "summary": "GetGrowerMapLayers-1",
-        "operationId": "get-getgrowermaplayers-1",
-        "parameters": [
-          {
-            "name": "growerId",
             "in": "path",
             "required": true,
             "schema": {
