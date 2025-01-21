@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "path": "shatter-and-greenness-classifier",
+    "apiRevision": "1",
+    "authenticationSettings": {},
+    "description": "Created From ApimConsole:CreateApi command.",
+    "isCurrent": true,
+    "displayName": "Shatter and Greenness Classifier",
+    "protocols": [
+      "https"
+    ],
+    "subscriptionKeyParameterNames": {
+      "header": "Ocp-Apim-Subscription-Key",
+      "query": "subscription-key"
+    },
+    "subscriptionRequired": true
+  }
+}
