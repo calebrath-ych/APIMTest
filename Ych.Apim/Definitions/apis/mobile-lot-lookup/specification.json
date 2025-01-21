@@ -47,35 +47,6 @@
           }
         }
       }
-    },
-    "contracts/customers/{customerCode}/varieties/{varietyCode}": {
-      "get": {
-        "summary": "GetContractDetails",
-        "operationId": "get-getcontractdetails",
-        "parameters": [
-          {
-            "name": "customerCode",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "varietyCode",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
     }
   },
   "components": {

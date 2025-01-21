@@ -1812,27 +1812,6 @@
           }
         }
       }
-    },
-    "user/{userId}/ycrm/notifications": {
-      "get": {
-        "summary": "GetYcrmUserNotifications",
-        "operationId": "get-getycrmusernotifications",
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
     }
   },
   "components": {

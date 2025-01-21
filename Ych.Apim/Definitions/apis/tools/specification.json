@@ -134,27 +134,6 @@
           }
         }
       }
-    },
-    "growers/{growerId}/harvest-exception-requests": {
-      "get": {
-        "summary": "GetGrowerHarvestExceptionRequests",
-        "operationId": "get-getgrowerharvestexceptionrequests",
-        "parameters": [
-          {
-            "name": "growerId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
     }
   },
   "components": {

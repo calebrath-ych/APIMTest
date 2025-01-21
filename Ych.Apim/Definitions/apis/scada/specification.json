@@ -17,7 +17,7 @@
         }
       }
     },
-    "contracts/customers/{customerCode}/varieties/{varietyCode}": {
+    "/contracts/customers/{customerCode}/varieties/{varietyCode}": {
       "get": {
         "summary": "GetContractDetails",
         "operationId": "get-getcontractdetails",
@@ -46,7 +46,7 @@
         }
       }
     },
-    "user/{userId}/ycrm/notifications": {
+    "/user/{userId}/ycrm/notifications": {
       "get": {
         "summary": "GetYcrmUserNotifications",
         "operationId": "get-getycrmusernotifications",

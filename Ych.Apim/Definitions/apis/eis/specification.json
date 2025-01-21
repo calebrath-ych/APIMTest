@@ -156,39 +156,6 @@
           }
         }
       }
-    },
-    "roguing/schedule/{scheduleId}": {
-      "get": {
-        "summary": "GetRoguingSchedule",
-        "operationId": "get-getroguingschedule",
-        "parameters": [
-          {
-            "name": "scheduleId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "grower-regions": {
-      "get": {
-        "summary": "GetGrowerRegions",
-        "operationId": "get-getgrowerregions",
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
     }
   },
   "components": {
