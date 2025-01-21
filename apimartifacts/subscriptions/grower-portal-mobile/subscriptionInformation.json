@@ -1,8 +1,0 @@
-{
-  "properties": {
-    "displayName": "Grower Portal Mobile",
-    "scope": "/subscriptions/60c5205c-b580-40d1-b796-5cecad0380e2/resourceGroups/APIV3/providers/Microsoft.ApiManagement/service/{{apim-instance-name}}/apis/grower-portal-mobile",
-    "allowTracing": false,
-    "state": "active"
-  }
-}

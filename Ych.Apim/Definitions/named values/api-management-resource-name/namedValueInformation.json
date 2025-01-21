@@ -1,0 +1,12 @@
+{
+  "properties": {
+    "displayName": "api-management-resource-name",
+    "secret": true,
+    "tags": [
+      "apim",
+      "key",
+      "function",
+      "auto"
+    ]
+  }
+}

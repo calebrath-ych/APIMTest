@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>YCH API Endpoint Azure Function</Title>
+			<Shortcut>api</Shortcut>
+			<Description>Code snippet for a new YchApi Azure Function</Description>
+			<Author>YCH Dev</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>namespace</ID>
+					<ToolTip>Namespce for the function, based on folder structure</ToolTip>
+					<Default>NewApiFunction</Default>
+				</Literal>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>API function name</ToolTip>
+					<Default>NewApiFunction</Default>
+				</Literal>
+				<Literal>
+					<ID>service</ID>
+					<ToolTip>Service contract containing implementation</ToolTip>
+					<Default>IApiService</Default>
+				</Literal>
+				<Literal>
+					<ID>method</ID>
+					<ToolTip>HTTP method(s) allowed for this endpoint</ToolTip>
+					<Default>get</Default>
+				</Literal>
+				<Literal>
+					<ID>route</ID>
+					<ToolTip>URL route for this endpoint</ToolTip>
+					<Default>route</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Extensions.Http;
+using System.Threading.Tasks;
+using Ych.Api;
+using Ych.Logging;
+using Ych.Api.Statistics;
+
+namespace YchApiFunctions.$namespace$
+{
+    public class $name$ : ApiFunction
+    {
+        private $service$ service;
+        private IValidationService validation;
+
+        public $name$($service$ service, IValidationService validation, ILogWriter log, IApiStatisticsService statistics) : base(log, statistics)
+        {
+            // Inject any additional dependencies here
+            this.service = service;
+            this.validation = validation;
+        }
+
+        [FunctionName(nameof($name$))]
+        public async Task<IActionResult> Run(
+            [HttpTrigger(AuthorizationLevel.Function, "$method$", Route = "$route$")] HttpRequest req)
+        {
+            return await ProcessRequest(req, async () =>
+            {
+                // Handle any input validation here using the injected ValidationService
+
+                // Return a SuccessResponse containing the result of your service method here
+                return SuccessResponse(await service.$name$());
+            });
+        }
+    }
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

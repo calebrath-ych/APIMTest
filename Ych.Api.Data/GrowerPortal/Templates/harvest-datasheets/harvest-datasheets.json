@@ -1,0 +1,66 @@
+{
+  "type": "Resource",
+  "source": "GrowerPortal",
+  "name":  "harvest-datasheets",
+  "table": "harvest_datasheets",
+  "primaryKey": "id", // Assume id if omitted?
+  "columns": [
+    { "name": "id" },
+    { "name": "grower_id" },
+    { "name": "grown_by" },
+    { "name": "lot_number" },
+    { "name": "bale_moisture_low" },
+    { "name": "bale_moisture_high" },
+    { "name": "cooling_hours_before_baler" },
+    { "name": "cooling_hours_in_kiln" },
+    { "name": "drying_hours" },
+    { "name": "drying_temp_f" },
+    { "name": "humidified" },
+    { "name": "kiln_depth_in" },
+    { "name": "facility_other" },
+    { "name": "harvest_start_at" },
+    { "name": "harvest_end_at" }
+  ],
+  "views": [
+    {
+      "name": "default" // Omit this view for all columns, you can specify a different default with this 'default' view
+    }
+  ],
+  "relationships": [
+    {
+      "name": "storage-conditions",
+      "resource": "storage-conditions", // If omitted assume name (vice/versa)
+      "localKey": "bale_storage_conditions", // If omitted, assume PK
+      "foreignKey": "id"
+    },
+    {
+      "name": "facilities",
+      "resource": "facilities",
+      "localKey": "facility_id",
+      "foreignKey": "id"
+    },
+    {
+      "name": "kiln-fuels",
+      "resource": "kiln-fuels",
+      "localKey": "kiln_fuel_id",
+      "foreignKey": "id"
+    },
+    {
+      "name": "picker-types",
+      "resource": "picker-types",
+      "localKey": "picker_type_id",
+      "foreignKey": "id"
+    }
+  ],
+  "filters": [
+    {
+      "name": "lot-number",
+      "column": "lot_number",
+      "table": "harvest_datasheets", // omit unless its on another table,
+      "operator": "=",
+      "multi": false, // Specify true to treat this filter as a list parameter
+      "required": false, // default to false, specify to make required? Or only per view?
+      "default": null // can specify a default value?
+    }
+  ]
+}

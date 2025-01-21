@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "path": "mobile-lot-lookup",
+    "apiRevision": "1",
+    "authenticationSettings": {},
+    "description": "Created from ApimDefinitionManager",
+    "isCurrent": true,
+    "displayName": "Mobile Lot Lookup",
+    "protocols": [
+      "https"
+    ],
+    "subscriptionKeyParameterNames": {
+      "header": "Ocp-Apim-Subscription-Key",
+      "query": "subscription-key"
+    },
+    "subscriptionRequired": true
+  }
+}

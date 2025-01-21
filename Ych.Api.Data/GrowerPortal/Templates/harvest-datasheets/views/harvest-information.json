@@ -1,0 +1,50 @@
+{
+  "$schema": "./../../../ViewTemplate.json",
+  "type": "ViewTemplate",
+  "name": "harvest-information",
+  "columns": null, // null for all columns, [] for no columns, or list of ColumnTemplate
+  "include": [
+    {
+      "name": "storage-conditions",
+      "relationship": "storage-conditions", // If omitted assume name (vice/versa)
+      "view": null, // Can also specify a view, specifying both add columns to the view
+      "filters": [ "lot-number" ], // Can specify which filters are available to this view. null for all, [] for none. Allow required flag here?
+      "columns": [
+        {
+          "name": "type",
+          "alias": "storage_conditions"
+        }
+      ]
+    },
+    {
+      "name": "facilities",
+      "relationship": "facilities",
+      "columns": [
+        {
+          "name": "name",
+          "alias": "facility_name"
+        }
+      ]
+    },
+    {
+      "name": "kiln-fuels",
+      "relationship": "kiln-fuels",
+      "columns": [
+        {
+          "name": "type",
+          "alias": "kiln_fuel_type"
+        }
+      ]
+    },
+    {
+      "name": "picker-types",
+      "relationship": "picker-types",
+      "columns": [
+        {
+          "name": "type",
+          "alias": "picker_type"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,511 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Selection",
+    "description": "Created from ApimDefinitionManager",
+    "version": "1.0"
+  },
+  "paths": {
+    "/lots/valid": {
+      "get": {
+        "summary": "GetMultiLotIsValid",
+        "operationId": "get-getmultilotisvalid",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/lots/locations/{year}": {
+      "get": {
+        "summary": "GetLotLocations",
+        "operationId": "get-getlotlocations",
+        "parameters": [
+          {
+            "name": "year",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/lots/{lotNumber}/bale-weight/": {
+      "get": {
+        "summary": "GetLotBaleWeight",
+        "operationId": "get-getlotbaleweight",
+        "parameters": [
+          {
+            "name": "lotNumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/lots/{lotNumber}/analytics/": {
+      "get": {
+        "summary": "GetLotAnalytics",
+        "operationId": "get-getlotanalytics",
+        "parameters": [
+          {
+            "name": "lotNumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/lots/{lotNumber}/harvest-data": {
+      "get": {
+        "summary": "GetLotHarvestData",
+        "operationId": "get-getlotharvestdata",
+        "parameters": [
+          {
+            "name": "lotNumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/lots/{lotNumber}/inventory": {
+      "get": {
+        "summary": "GetAvailableLotInventory",
+        "operationId": "get-getavailablelotinventory",
+        "parameters": [
+          {
+            "name": "lotNumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/product-lines/list": {
+      "get": {
+        "summary": "GetProductLineCodeAndNameMap",
+        "operationId": "get-getproductlinecodeandnamemap",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/lots/inventory": {
+      "post": {
+        "summary": "GetAvailableLotInventoryMulti",
+        "operationId": "post-getavailablelotinventorymulti",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/contracts/customers/{customerCode}/selectable-varieties/": {
+      "get": {
+        "summary": "GetCustomerSelectableVarieties",
+        "operationId": "get-getcustomerselectablevarieties",
+        "parameters": [
+          {
+            "name": "customerCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/contracts/customers/{customerCode}/varieties/{varietyCode}": {
+      "get": {
+        "summary": "GetContractDetails",
+        "operationId": "get-getcontractdetails",
+        "parameters": [
+          {
+            "name": "customerCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          },
+          {
+            "name": "varietyCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/lots/valid/wms/": {
+      "get": {
+        "summary": "GetMultiLotIsValidWms",
+        "operationId": "get-getmultilotisvalidwms",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/varieties/list": {
+      "get": {
+        "summary": "GetVarietyCodeAndNameMap",
+        "operationId": "get-getvarietycodeandnamemap",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/customer/{customerCode}/contracts/pack-sizes": {
+      "get": {
+        "summary": "GetPackSizesForContractLines",
+        "operationId": "getpacksizesforcontractlines",
+        "parameters": [
+          {
+            "name": "customerCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          },
+          {
+            "name": "cropYear",
+            "in": "query",
+            "schema": {
+              "type": ""
+            }
+          },
+          {
+            "name": "productLineCode",
+            "in": "query",
+            "schema": {
+              "type": ""
+            }
+          },
+          {
+            "name": "varietyCode",
+            "in": "query",
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/{varietyCode}/lots/{cropYear}/": {
+      "get": {
+        "summary": "GetLotQuantitiesByVariety",
+        "operationId": "get-getlotquantitiesbyvariety",
+        "parameters": [
+          {
+            "name": "varietyCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          },
+          {
+            "name": "cropYear",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/varieties/{varietyCode}/standard-values": {
+      "get": {
+        "summary": "GetVarietyStandardBrewingValuesAndAromas",
+        "operationId": "get-getvarietystandardbrewingvaluesandaromas",
+        "parameters": [
+          {
+            "name": "varietyCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/clone-62ed9/{varietyCode}/lots/{cropYear}": {
+      "get": {
+        "summary": "GetLotQuantitiesByVariety (clone)",
+        "operationId": "62ed92aebe1612baab85cdbf",
+        "parameters": [
+          {
+            "name": "varietyCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          },
+          {
+            "name": "cropYear",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/{varietyCode}/lots/{cropYear}/{lot}-1": {
+      "get": {
+        "summary": "GetLotQuantitiesByVariety-1",
+        "operationId": "get-getlotquantitiesbyvariety-1",
+        "parameters": [
+          {
+            "name": "varietyCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          },
+          {
+            "name": "cropYear",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          },
+          {
+            "name": "lot",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/contracts/pod/varieties/{varietyCode}/productLine/{productLineCode}": {
+      "get": {
+        "summary": "GetPodSelectionContracts",
+        "operationId": "get-getpodselectioncontracts",
+        "parameters": [
+          {
+            "name": "varietyCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          },
+          {
+            "name": "productLineCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/lots/analytics": {
+      "get": {
+        "summary": "GetMultiLotAnalytics",
+        "operationId": "get-getmultilotanalytics",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/sample/meta/{sampleId}/scada": {
+      "get": {
+        "summary": "GetSampleMeta",
+        "operationId": "getsamplemeta",
+        "parameters": [
+          {
+            "name": "sampleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/customers/{customerCode}/representatives": {
+      "get": {
+        "summary": "GetCustomerRepresentatives",
+        "operationId": "getcustomerrepresentatives",
+        "parameters": [
+          {
+            "name": "customerCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/samples/scada/{sampleId}/{sampleType}": {
+      "get": {
+        "summary": "GetSamples",
+        "operationId": "get-getsamples",
+        "parameters": [
+          {
+            "name": "sampleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          },
+          {
+            "name": "sampleType",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "apiKeyHeader": {
+        "type": "apiKey",
+        "name": "Ocp-Apim-Subscription-Key",
+        "in": "header"
+      },
+      "apiKeyQuery": {
+        "type": "apiKey",
+        "name": "subscription-key",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": [ ]
+    },
+    {
+      "apiKeyQuery": [ ]
+    }
+  ]
+}

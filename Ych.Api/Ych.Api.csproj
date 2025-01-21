@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\YchNet\ych-net\Ych.Api.Client\Ych.Api.Client.csproj" />
+    <ProjectReference Include="..\..\..\YchNet\ych-net\Ych.Magento\Ych.Magento.csproj" />
+    <ProjectReference Include="..\..\..\YchNet\ych-net\Ych\Ych.csproj" />
+    <ProjectReference Include="..\Ych.Api.Data\Ych.Api.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Lims\" />
+    <Folder Include="Pim\" />
+    <Folder Include="Selection\" />
+    <Folder Include="Sensory\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Data.Tables" Version="12.9.0" />
+    <PackageReference Include="Stubble.Core" Version="1.10.8" />
+    <PackageReference Include="TimeZoneConverter" Version="6.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Sensory\" />
+  </ItemGroup>
+</Project>

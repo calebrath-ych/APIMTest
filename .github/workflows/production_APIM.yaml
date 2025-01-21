@@ -1,0 +1,52 @@
+name: Run - Publisher Production
+
+on:
+  # Triggers the workflow on pull request events but only for the main branch
+  push:
+    branches:
+      - production
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      COMMIT_ID_CHOICE:
+        description: 'Choose "publish-all-artifacts-in-repo" only when you want to force republishing all artifacts (e.g. after build failure). Otherwise stick with the default behavior of "publish-artifacts-in-last-commit"'
+        required: true
+        type: choice
+        default: "publish-artifacts-in-last-commit"
+        options:
+          - "publish-artifacts-in-last-commit"
+          - "publish-all-artifacts-in-repo"
+
+jobs:
+  get-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Commit Hash
+        id: vars
+        shell: bash
+        run: echo "commit_id=${GITHUB_SHA}" >> $GITHUB_OUTPUT
+    outputs:
+      commit_id: ${{ steps.vars.outputs.commit_id }}
+  #Publish with Commit ID
+  Push-Changes-To-APIM-With-Commit-ID:
+    if: (github.event.inputs.COMMIT_ID_CHOICE == 'publish-artifacts-in-last-commit' || github.event.inputs.COMMIT_ID_CHOICE == '')
+    needs: get-commit
+    uses: ./.github/workflows/run-publisher-with-env.yaml
+    with:
+      API_MANAGEMENT_ENVIRONMENT: Production 
+      COMMIT_ID: ${{ needs.get-commit.outputs.commit_id }}
+      API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: Ych.Apim/Definitions
+      CONFIGURATION_YAML_PATH: Ych.Apim/configuration.production.yaml
+    secrets: inherit
+
+  #Publish without Commit ID. Publishes all artifacts that reside in the artifacts folder
+  Push-Changes-To-APIM-Without-Commit-ID:
+    if: ( github.event.inputs.COMMIT_ID_CHOICE == 'publish-all-artifacts-in-repo' )
+    needs: get-commit
+    uses: ./.github/workflows/run-publisher-with-env.yaml
+    with:
+      API_MANAGEMENT_ENVIRONMENT: Production 
+      API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: Ych.Apim/Definitions
+      CONFIGURATION_YAML_PATH: Ych.Apim/configuration.production.yaml
+    secrets: inherit

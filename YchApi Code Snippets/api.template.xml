@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeTemplates version="3.0">
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>C#</_Group>
+      <Version />
+      <MimeType>text/x-csharp</MimeType>
+      <Shortcut>api</Shortcut>
+      <_Description>Code snippet for a new YchApi Azure Function</_Description>
+      <TemplateType>Expansion, SurroundsWith</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="namespace">
+        <Default>NewApiFunction</Default>
+      </Variable>
+      <Variable name="name">
+        <Default>NewApiFunction</Default>
+      </Variable>
+      <Variable name="service">
+        <Default>IApiService</Default>
+      </Variable>
+      <Variable name="method">
+        <Default>get</Default>
+      </Variable>
+      <Variable name="route">
+        <Default>route</Default>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Extensions.Http;
+using System.Threading.Tasks;
+using Ych.Api;
+using Ych.Logging;
+
+namespace YchApiFunctions.$namespace$
+{
+    public class $name$ : ApiFunction
+    {
+        private $service$ service;
+        private IValidationService validation;
+
+        public $name$($service$ service, IValidationService validation, ILogWriter log) : base(log)
+        {
+            // Inject any additional dependencies here
+            this.service = service;
+            this.validation = validation;
+        }
+
+        [FunctionName(nameof($name$))]
+        public async Task<IActionResult> Run(
+            [HttpTrigger(AuthorizationLevel.Function, "$method$", Route = "$route$")] HttpRequest req)
+        {
+            return await ProcessRequest(req, async () =>
+            {
+                // Handle any input validation here using the injected ValidationService
+
+                // Return a SuccessResponse containing the result of your service method here
+                return SuccessResponse(await service.$name$());
+            });
+        }
+    }
+}]]></Code>
+  </CodeTemplate>
+</CodeTemplates>

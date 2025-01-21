@@ -1,0 +1,40 @@
+{
+  "$schema": "ResourceTemplate.json",
+  "type": "Resource",
+  "source": "X3",
+  "name": "bale-inventories",
+  "table": "bale_inventories", // Even though this is not a table, this is the name the resource will be referred to when attaching it, etc.
+  "sproc": "API_LIVE_AvailableBaleInventory",
+  "primaryKey": "lot", // Assume id if omitted?
+  "columns": [
+    { "name": "lot" },
+    { "name": "product_line_id" },
+    { "name": "product_line" },
+    { "name": "lbs" }
+  ],
+  "views": [
+    {
+      "name": "harvest",
+      "attach": [
+        {
+          "relationship": "harvest-information",
+          "alias": "info"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "name": "harvest-information",
+      "localKey": "lot-number", // If omitted, assume PK
+      "foreignKey": "lot-number"
+    }
+  ],
+  "filters": [
+    {
+      "name": "lot-number",
+      "column": "lot",
+      "required": true // Query invalid without this filter (sproc requires it)
+    }
+  ]
+}

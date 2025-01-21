@@ -1,0 +1,17 @@
+apimServiceName: ych-test
+namedValues:
+  - name: api-management-resource-name
+    properties:
+      displayName: api-management-resource-name
+      value: "{#API_MANAGEMENT_SERVICE_NAME#}"
+backends:
+  - name: ychapiv3
+    properties:
+      description: "Ych APIv3 Functions Stage Environment."
+      url: "https://ychapiv3-stage.azurewebsites.net/api"
+      resourceId: "https://management.azure.com/subscriptions/{#AZURE_SUBSCRIPTION_ID#}/resourceGroups/{#AZURE_RESOURCE_GROUP_NAME#}/providers/Microsoft.Web/sites/{#FUNCTION_APP_RESOURCE_NAME#}"
+      credentials:
+        header:
+          "x-functions-key": [
+            "{{ychapiv3-stage-key}}"
+          ]

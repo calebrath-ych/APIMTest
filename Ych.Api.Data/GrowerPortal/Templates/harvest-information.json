@@ -1,0 +1,121 @@
+{
+  "type": "Resource",
+  "source": "GrowerPortal",
+  "name": "harvest-information",
+  "table": "harvest_datasheets",
+  "primaryKey": "lot_number", // Assume id if omitted?
+  "columns": [
+    { "name": "id" },
+    { "name": "grower_id" },
+    { "name": "grown_by" },
+    { "name": "lot_number" },
+    { "name": "bale_moisture_low" },
+    { "name": "bale_moisture_high" },
+    { "name": "cooling_hours_before_baler" },
+    { "name": "cooling_hours_in_kiln" },
+    { "name": "drying_hours" },
+    { "name": "drying_temp_f" },
+    { "name": "humidified" },
+    { "name": "kiln_depth_in" },
+    { "name": "facility_other" },
+    { "name": "harvest_start_at" },
+    { "name": "harvest_end_at" }
+  ],
+  "views": [
+    {
+      "name": "default",
+      "columns": null, // null for all columns, [] for no columns, or list of ColumnTemplate
+      "include": [
+        {
+          "name": "storage-conditions",
+          "relationship": "storage-conditions", // If omitted assume name (vice/versa)
+          "view": null, // Can also specify a view, specifying both add columns to the view
+          "columns": [
+            {
+              "name": "type",
+              "alias": "storage_conditions"
+            }
+          ]
+        },
+        {
+          "name": "facilities",
+          "relationship": "facilities",
+          "columns": [
+            {
+              "name": "name",
+              "alias": "facility_name"
+            }
+          ]
+        },
+        {
+          "name": "kiln-fuels",
+          "relationship": "kiln-fuels",
+          "columns": [
+            {
+              "name": "type",
+              "alias": "kiln_fuel_type"
+            }
+          ]
+        },
+        {
+          "name": "picker-types",
+          "relationship": "picker-types",
+          "columns": [
+            {
+              "name": "type",
+              "alias": "picker_type"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "summary",
+      "columns": [
+        { "name": "grown_by" },
+        { "name": "lot_number" },
+        { "name": "bale_moisture" },
+        { "name": "humidified" }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "name": "storage-conditions",
+      "resource": "storage-conditions", // If omitted assume name (vice/versa)
+      "localKey": "bale_storage_conditions", // If omitted, assume PK
+      "foreignKey": "id"
+    },
+    {
+      "name": "facilities",
+      "resource": "facilities",
+      "localKey": "facility_id",
+      "foreignKey": "id"
+    },
+    {
+      "name": "kiln-fuels",
+      "resource": "kiln-fuels",
+      "localKey": "kiln_fuel_id",
+      "foreignKey": "id"
+    },
+    {
+      "name": "picker-types",
+      "resource": "picker-types",
+      "localKey": "picker_type_id",
+      "foreignKey": "id"
+    },
+    {
+      "name": "bale-inventories",
+      "localKey": "lot-number",
+      "foreignKey": "lot-number"
+    }
+  ],
+  "filters": [
+    {
+      "name": "lot-number",
+      "column": "lot_number",
+      "table": "harvest_datasheets", // omit unless its on another table, 
+      "operator": "="
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "YCRM Mobile",
+    "description": "Created from ApimDefinitionManager",
+    "version": "1.0"
+  },
+  "paths": {
+    "/proxy/post": {
+      "post": {
+        "summary": "PostProxy",
+        "operationId": "post-postproxy",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/proxy/get": {
+      "get": {
+        "summary": "GetProxy",
+        "operationId": "get-getproxy",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/customers/feature": {
+      "get": {
+        "summary": "GetCustomerByCoordinates",
+        "operationId": "get-getcustomerbycoordinates",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/user/{userId}/ycrm/notifications": {
+      "get": {
+        "summary": "GetYcrmUserNotifications",
+        "operationId": "get-getycrmusernotifications",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/user/{userId}/ycrm/notifications/settings": {
+      "get": {
+        "summary": "GetYcrmUserNotificationSettings",
+        "operationId": "get-getycrmusernotificationsettings",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/customer-types": {
+      "get": {
+        "summary": "GetCustomerTypes",
+        "operationId": "getcustomertypes",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/configuration/app-settings": {
+      "get": {
+        "summary": "GetAppSettings",
+        "operationId": "get-getappsettings",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/configuration/{systemName}/version": {
+      "get": {
+        "summary": "VerifyMobileClientVersion",
+        "operationId": "get-verifymobileclientversion",
+        "parameters": [
+          {
+            "name": "systemName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/proxy/ycrm/get": {
+      "get": {
+        "summary": "YcrmGetProxy",
+        "operationId": "get-ycrmgetproxy",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/proxy/ycrm/post": {
+      "post": {
+        "summary": "YcrmPostProxy",
+        "operationId": "post-ycrmpostproxy",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "apiKeyHeader": {
+        "type": "apiKey",
+        "name": "Ocp-Apim-Subscription-Key",
+        "in": "header"
+      },
+      "apiKeyQuery": {
+        "type": "apiKey",
+        "name": "subscription-key",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": [ ]
+    },
+    {
+      "apiKeyQuery": [ ]
+    }
+  ]
+}

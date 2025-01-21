@@ -1,0 +1,11 @@
+{
+  "$schema": "./../../../ViewTemplate.json",
+  "type": "ViewTemplate",
+  "name": "summary",
+  "columns": [
+    { "name": "grown_by" },
+    { "name": "lot_number" },
+    { "name": "bale_moisture" },
+    { "name": "humidified" }
+  ]
+}

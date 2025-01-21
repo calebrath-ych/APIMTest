@@ -1,9 +1,0 @@
-{
-  "properties": {
-    "displayName": "apim-base-url",
-    "secret": false,
-    "tags": [
-      "api"
-    ]
-  }
-}
